@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Serviços profissionais de investigação digital e remoção de conteúdo online. Privacidade e discrição garantidas.">
+  <title>opauloinvestigador - Serviços de Investigação Digital Profissional</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --primary: #3a86ff;
+      --primary-dark: #2667cc;
+      --secondary: #8338ec;
+      --dark-bg: #0e1a2b;
+      --darker-bg: #08101d;
+      --card-bg: #121f33;
+      --text-light: #e0e0e0;
+      --text-lighter: #f5f5f5;
+      --accent: #ff006e;
+    }
+    
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    
+    body {
+      font-family: 'Roboto', sans-serif;
+      background-color: var(--dark-bg);
+      color: var(--text-light);
+      line-height: 1.6;
+      scroll-behavior: smooth;
+    }
+    
+    h1, h2, h3, h4 {
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 600;
+    }
+    
+    header {
+      background: linear-gradient(135deg, var(--darker-bg) 0%, var(--dark-bg) 100%);
+      padding: 2rem 1.5rem;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+    
+    header::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: radial-gradient(circle at 20% 50%, rgba(58, 134, 255, 0.15) 0%, transparent 50%);
+      pointer-events: none;
+    }
+    
+    header h1 {
+      margin: 0;
+      font-size: 2.5rem;
+      color: var(--primary);
+      text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+      position: relative;
+    }
+    
+    header p {
+      margin: 1rem 0 1.5rem;
+      font-size: 1.2rem;
+      max-width: 700px;
+      margin-left: auto;
+      margin-right: auto;
+      position: relative;
+    }
+    
+    .cta-button {
+      display: inline-block;
+      margin: 0.5rem;
+      padding: 0.8rem 2rem;
+      background: linear-gradient(to right, var(--primary), var(--secondary));
+      color: white;
+      border-radius: 50px;
+      text-decoration: none;
+      font-weight: 500;
+      font-size: 1rem;
+      transition: all 0.3s ease;
+      box-shadow: 0 4px 15px rgba(58, 134, 255, 0.3);
+      position: relative;
+      overflow: hidden;
+      border: none;
+      cursor: pointer;
+    }
+    
+    .cta-button:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 6px 20px rgba(58, 134, 255, 0.4);
+      background: linear-gradient(to right, var(--primary-dark), var(--secondary));
+    }
+    
+    .cta-button:active {
+      transform: translateY(1px);
+    }
+    
+    section {
+      padding: 4rem 1.5rem;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+    
+    h2 {
+      text-align: center;
+      font-size: 2rem;
+      margin-bottom: 3rem;
+      color: var(--primary);
+      position: relative;
+      display: inline-block;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+    
+    h2::after {
+      content: '';
+      position: absolute;
+      bottom: -10px;
+      left: 0;
+      width: 100%;
+      height: 3px;
+      background: linear-gradient(to right, var(--primary), var(--secondary));
+      border-radius: 3px;
+    }
+    
+    .servicos {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 2rem;
+    }
+    
+    .servico {
+      background-color: var(--card-bg);
+      border-radius: 12px;
+      padding: 2rem;
+      text-align: center;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+      transition: all 0.3s ease;
+      border: 1px solid rgba(58, 134, 255, 0.1);
+      position: relative;
+      overflow: hidden;
+    }
+    
+    .servico::before {
+      content: '';
+      position: absolute;
+      top: -2px;
+      left: -2px;
+      right: -2px;
+      bottom: -2px;
+      background: linear-gradient(45deg, var(--primary), var(--secondary));
+      z-index: -1;
+      border-radius: 14px;
+      opacity: 0;
+      transition: opacity 0.3s ease;
+    }
+    
+    .servico:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+      border-color: rgba(58, 134, 255, 0.3);
+    }
+    
+    .servico:hover::before {
+      opacity: 0.3;
+    }
+    
+    .servico img {
+      width: 70px;
+      height: 70px;
+      margin-bottom: 1.5rem;
+      object-fit: contain;
+      filter: drop-shadow(0 4px 6px rgba(0, 0, 0, 0.2));
+    }
+    
+    .servico h3 {
+      margin: 0 0 1rem;
+      color: var(--primary);
+      font-size: 1.4rem;
+    }
+    
+    .servico p {
+      margin: 0.5rem 0;
+      font-size: 1rem;
+    }
+    
+    .servico .price {
+      font-weight: 500;
+      color: var(--text-lighter);
+      font-size: 1.1rem;
+      margin: 1rem 0;
+    }
+    
+    .cta-form {
+      text-align: center;
+      margin: 4rem auto;
+      max-width: 800px;
+    }
+    
+    .cta-form h2 {
+      margin-bottom: 2rem;
+    }
+    
+    .button-group {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+    
+    .testimonials {
+      background-color: var(--darker-bg);
+      padding: 4rem 1.5rem;
+    }
+    
+    .testimonial-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 2rem;
+      margin-top: 3rem;
+    }
+    
+    .testimonial {
+      background-color: var(--card-bg);
+      padding: 2rem;
+      border-radius: 12px;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    }
+    
+    .testimonial-content {
+      font-style: italic;
+      margin-bottom: 1rem;
+    }
+    
+    .testimonial-author {
+      font-weight: 500;
+      color: var(--primary);
+    }
+    
+    footer {
+      text-align: center;
+      font-size: 0.9rem;
+      padding: 2rem 1rem;
+      background-color: var(--darker-bg);
+      border-top: 1px solid rgba(58, 134, 255, 0.1);
+    }
+    
+    .footer-content {
+      max-width: 600px;
+      margin: 0 auto;
+    }
+    
+    .payment-methods {
+      margin: 1rem 0;
+      display: flex;
+      justify-content: center;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+    
+    .payment-method {
+      background-color: rgba(255, 255, 255, 0.1);
+      padding: 0.3rem 0.8rem;
+      border-radius: 20px;
+      font-size: 0.8rem;
+    }
+    
+    @media (max-width: 768px) {
+      header h1 {
+        font-size: 2rem;
+      }
+      
+      header p {
+        font-size: 1rem;
+      }
+      
+      h2 {
+        font-size: 1.6rem;
+      }
+      
+      .servicos {
+        grid-template-columns: 1fr;
+      }
+      
+      .button-group {
+        flex-direction: column;
+        align-items: center;
+      }
+      
+      .cta-button {
+        width: 100%;
+        max-width: 300px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>@opauloinvestigador</h1>
+    <p>Proteção digital profissional com privacidade e discrição absolutas. Soluções personalizadas para sua segurança online.</p>
+    <a class="cta-button" href="#formulario">Solicitar Atendimento</a>
+  </header>
+
+  <section>
+    <h2>Serviços Especializados</h2>
+    <div class="servicos">
+      <div class="servico">
+        <img src="https://img.icons8.com/color/96/privacy-policy.png" alt="Dados Vazados">
+        <h3>Remoção de Dados Vazados</h3>
+        <p>Identificação e remoção de informações pessoais divulgadas ilegalmente em vazamentos de dados.</p>
+        <div class="price">R$300 - R$1000</div>
+      </div>
+      <div class="servico">
+        <img src="https://img.icons8.com/fluency/96/private2.png" alt="Fotos Íntimas">
+        <h3>Fotos Íntimas Expostas</h3>
+        <p>Ação imediata para remoção e rastreamento da origem de conteúdo íntimo compartilhado sem consentimento.</p>
+        <div class="price">R$2500 - R$5000</div>
+      </div>
+      <div class="servico">
+        <img src="https://img.icons8.com/?size=100&id=8JLTu9TMImQC&format=png&color=000000" alt="Fake News">
+        <h3>Combate a Fake News</h3>
+        <p>Identificação de fontes e remoção de conteúdos falsos prejudiciais à sua reputação pessoal ou profissional.</p>
+        <div class="price">R$1000 - R$2500</div>
+      </div>
+      <div class="servico">
+        <img src="https://img.icons8.com/fluency/96/secured-letter.png" alt="Documentos Sensíveis">
+        <h3>Proteção de Documentos</h3>
+        <p>Recuperação e remoção de documentos pessoais, contratos ou informações confidenciais vazadas online.</p>
+        <div class="price">R$1000 - R$2000</div>
+      </div>
+      <div class="servico">
+        <img src="https://img.icons8.com/fluency/96/google-logo.png" alt="Busca">
+        <h3>Remoção de Resultados de Busca</h3>
+        <p>Eliminação de links prejudiciais dos mecanismos de busca como Google, Bing e outros.</p>
+        <div class="price">R$500 - R$1000</div>
+      </div>
+      <div class="servico">
+        <img src="https://img.icons8.com/fluency/96/copyright.png" alt="Pirata">
+        <h3>Combate a Pirataria</h3>
+        <p>Remoção de conteúdo protegido por direitos autorais compartilhado ilegalmente em plataformas digitais.</p>
+        <div class="price">R$800 - R$2500</div>
+      </div>
+    </div>
+  </section>
+
+  <section class="testimonials">
+    <h2>Depoimentos de Clientes</h2>
+    <div class="testimonial-grid">
+      <div class="testimonial">
+        <div class="testimonial-content">
+          "O Paulo conseguiu remover fotos pessoais que estavam circulando em fóruns obscuros em menos de 48 horas. Profissionalismo e discrição impressionantes."
+        </div>
+        <div class="testimonial-author">- Ana C., São Paulo</div>
+      </div>
+      <div class="testimonial">
+        <div class="testimonial-content">
+          "Após um vazamento de dados da minha empresa, o serviço de remoção foi essencial para minimizar os danos. Recomendo fortemente!"
+        </div>
+        <div class="testimonial-author">- Ricardo M., Rio de Janeiro</div>
+      </div>
+      <div class="testimonial">
+        <div class="testimonial-content">
+          "Conteúdos falsos estavam afetando minha carreira. Em uma semana, o Paulo identificou as fontes e removeu o material calunioso."
+        </div>
+        <div class="testimonial-author">- Juliana F., Porto Alegre</div>
+      </div>
+    </div>
+  </section>
+
+  <section id="formulario" class="cta-form">
+    <h2>Solicite Seu Atendimento</h2>
+    <p>Todos os casos são tratados com absoluta confidencialidade. Respondemos em até 24 horas úteis.</p>
+    <div class="button-group">
+      <a class="cta-button" href="https://docs.google.com/forms/d/e/1FAIpQLSfExemplo123/formResponse" target="_blank" rel="noopener noreferrer">Formulário Seguro</a>
+      <a class="cta-button" href="https://www.instagram.com/opauloinvestigador" target="_blank" rel="noopener noreferrer">Contato pelo Instagram</a>
+      <a class="cta-button" href="mailto:contato@protonmail.com?subject=Consulta%20de%20Serviços">E-mail Criptografado</a>
+    </div>
+  </section>
+
+  <footer>
+    <div class="footer-content">
+      <p>© 2025 opauloinvestigador - Serviços de Investigação Digital Profissional</p>
+      <p>Atendimento sigiloso via canais criptografados</p>
+      <div class="payment-methods">
+        <span class="payment-method">PIX</span>
+        <span class="payment-method">Bitcoin</span>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
