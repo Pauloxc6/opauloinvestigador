@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/conf-site.css">
+  <script src="./js/script.js"></script>
+  <title>Adminitração - Configuração do Site</title>
+</head>
+
+<body>
+
+  <header>
+    <h2>Adminitração</h2>
+  </header>
+
+  <div class="sidebar">
+    <nav>
+    <ul>
+       <li><a href="conf-conteudo.html">Gestão de Conteúdo</a></li>
+       <li><a href="conf-usuario.html">Gestão de Usuários</a></li>
+       <li><a href="conf-site.html">Configurações do Site</a></li>
+       <li><a href="../index.html">Sair</a></li>
+    </ul>
+  </nav>
+  </div>
+
+  <main>
+        <section id="configuracoes">
+            <h2>Configurações do Site</h2>
+            <form action="salvar_configuracoes.php" method="post">
+        		  <label for="titulo-site">Título do Site:</label>
+        		  <input type="text" id="titulo-site" name="titulo-site" required><br/>
+        		  <label for="descricao-site">Descrição do Site:</label>
+        		  <textarea id="descricao-site" name="descricao-site" rows="4" required></textarea><br/>
+        		  <label for="logo">Logo do Site:</label>
+        		  <input type="file" id="logo" name="logo"><br/><br/>
+        		  <button type="submit">Salvar Configurações</button>
+    		</form>
+        </section>      
+    </main>
+
+  <footer>
+    <p>&copy; 2024 Site do Flamengo - Todos Direitos Reservasdos</p>
+  </footer>
+
+</body>
+
+</html>

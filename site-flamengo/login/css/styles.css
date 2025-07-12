@@ -1,0 +1,134 @@
+/* Login */
+
+/* ==== Corpo Principal ==== */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f5f5f5;
+}
+
+/* ==== Estilo do Cabeçalho ==== */
+header {
+  background-color: #D70022;
+  color: #ffffff;
+  text-align: center;
+  padding: 20px;
+  display: flex;
+}
+
+/* ==== Estilo da Imagem ao lado do nome ==== */
+header img {
+  width: 100px;
+  height: 100px;
+  margin-right: 10px;
+}
+
+/* ==== Personaliza o titulo ==== */
+header h1 a {
+  text-decoration: none;
+  color: #ffffff;
+  margin: 0;
+}
+
+.wrap header h1 {
+  letter-spacing: -1px;
+  text-shadow: -2px 4px 20px black;
+}
+
+/* ==== Estilo do sidebar ==== */
+nav {
+  background-color: #333333;
+  padding: 10px 0;
+}
+
+nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+nav ul li {
+  display: inline;
+}
+
+nav ul li a {
+  color: #ffffff;
+  text-decoration: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+nav ul li a:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* ==== Estilo do painel de login ==== */
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50vh;
+}
+
+.login-form {
+  background-color: #ffffff;
+  padding: 30px;
+  border-radius: 60px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.login-form h2 {
+  text-align: center;
+}
+
+.input-group {
+  margin-bottom: 20px;
+}
+
+.input-group label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.input-group input {
+  width: 95%;
+  padding: 5px;
+  border: 1px solid #cccccc;
+  border-radius: 5px;
+}
+
+.confirmar {
+  text-align: center;
+  padding: 5px;
+} 
+
+/* ==== Faz a estilização do botao ==== */
+button {
+  width: 100%;
+  padding: 10px;
+  background-color: #007bff;
+  color: #ffffff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-bottom: 20px;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+/* ==== Estiliza o rodape ==== */
+footer {
+  background-color: #333333;
+  color: #ffffff;
+  text-align: center;
+  padding: 10px;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+

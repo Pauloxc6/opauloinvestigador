@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+    <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <link rel="stylesheet" type="text/css" href="normalize.css">
+      <link rel="stylesheet" href="./css/styles.css">
+      <title>Flamengo - Contato</title>
+    </head>
+
+    <body>
+      <div class="wrap">  
+          <header>
+            <img src="./img/logo.png">
+            <h1>Flamengo</h1>
+            <button id="playButton">Play</button>
+          </header>
+
+          <div class="sidebar">
+            <nav>
+                <ul>
+                  <li><a href="index.html">Home</a></li>
+                  <li><a href="historia.html">História</a></li>
+                  <li><a href="titulos.html">Titulos</a></li>
+                  <li><a href="contato.html">Contato</a></li>
+                  <li><a href="./login/login.html">Login</a></li>
+                </ul>
+            </nav>
+          </div>
+
+          <audio id="audioPlayer" src="./audio/hino-flamengo.mp3"></audio>
+
+          <main>
+            <div class="container">
+
+                <div class="div-sobre">
+                    <section id="contato">
+                        <h2>Contato</h2>
+                        <form action="" method="post" class="contato">
+                            <label for="nome">Seu nome: </label>
+                            <input type="text" name="nome" id="nome">
+                            <label for="email">Seu email: </label>
+                            <input type="email" name="email" id="email">
+                            <label for="mensagem">Mensagem: </label>
+                            <textarea id="mensagem" name="mensagem"></textarea>
+                            <input type="submit" name="enviar" class="botao" value="Enviar mesagem &raquo;">  
+                        </form>
+                    </section>
+                </div>
+            </div>
+          </main>
+
+          <script src="./js/script.js"></script>
+
+          <footer>
+                <p>&copy; 2024 Site do Flamengo - Todos Direitos Reservasdos</p>
+          </footer>
+      </div>
+    </body>
+
+</html>
